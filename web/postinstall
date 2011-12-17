@@ -12,7 +12,7 @@ symfony_install_vendor() {
     local vendor_directory=$HOME/vendor/
 
     [ -d $vendor_directory ] || mkdir -p $vendor_directory
-
+ 
     rm -rf ~/code/vendor
     ln -s $vendor_directory ~/code/vendor
 
