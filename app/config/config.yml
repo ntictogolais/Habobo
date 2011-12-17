@@ -62,15 +62,15 @@ jms_security_extra:
 
 
 doctrine_mongodb:
-    connections:
+    connections:	
         default:
             server: mongodb://moungodbdotcloud-mcguy-data-0.dotcloud.com:14244
             options:
                 connect: true
                 username: coco
                 password: wawa
-				
+                
     default_database: habobo
     document_managers:
         default:
-            auto_mapping: true	
+            auto_mapping: true    
