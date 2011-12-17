@@ -60,9 +60,8 @@ jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
 
-
 doctrine_mongodb:
-    connections:	
+    connections:    
         default:
             server: mongodb://moungodbdotcloud-mcguy-data-0.dotcloud.com:14244
             options:
