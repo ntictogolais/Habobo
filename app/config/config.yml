@@ -1,7 +1,7 @@
 imports:
     - { resource: parameters.ini }
     - { resource: security.yml }
-	- { resource: dotcloud.php }
+    - { resource: dotcloud.php }
 
 framework:
     #esi:             ~
@@ -60,14 +60,17 @@ jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
 
-	
+
 doctrine_mongodb:
     connections:
         default:
-            server: mongodb://localhost:27017
+            server: mongodb://moungodbdotcloud-mcguy-data-0.dotcloud.com:14244
             options:
                 connect: true
-    default_database: test_database
+                username: coco
+                password: wawa
+				
+    default_database: habobo
     document_managers:
         default:
             auto_mapping: true	
