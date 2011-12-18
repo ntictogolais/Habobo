@@ -63,7 +63,7 @@ jms_security_extra:
 doctrine_mongodb:
     connections:    
         default:
-            server: mongodb://moungodbdotcloud-mcguy-data-0.dotcloud.com:14244
+            server: mongodb://localhost:27017
             options:
                 connect: true
                 username: coco

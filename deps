@@ -71,3 +71,11 @@
     git=http://github.com/symfony/DoctrineMongoDBBundle.git
     target=/bundles/Symfony/Bundle/DoctrineMongoDBBundle
     version=v2.0.0	
+
+[FOSFacebookBundle]
+    git=git://github.com/FriendsOfSymfony/FOSFacebookBundle.git
+    target=/bundles/FOS/FacebookBundle
+
+[FacebookSDK]
+    git=git://github.com/facebook/php-sdk.git
+    target=/facebook
