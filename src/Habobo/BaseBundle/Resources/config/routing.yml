@@ -1,0 +1,3 @@
+HaboboBaseBundle_homepage:
+    pattern:  /
+    defaults: { _controller: HaboboBaseBundle:Default:index }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html  xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />       
+		<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">         
+    </head>
+    <body>
+		{{ facebook_initialize({'xfbml': true, 'fbAsyncInit': 'onFbInit();'}) }} 
+		<script>
+			function onFbInit() {
+				alert("here we go init");
+				if (typeof(FB) != 'undefined' && FB != null ) {
+					FB.Event.subscribe('auth.login', function(response) {
+						alert("here we go in");
+					}
+					FB.Event.subscribe('auth.logout', function(response) {
+						window.location = "{{ path('_security_logout') }}";
+						alert("here we go out");
+					});
+				 }
+			 }
+		</script>   
+		<p>Bienvenu(e) sur {{ message }} </p>
+	</body>
+</html>	
