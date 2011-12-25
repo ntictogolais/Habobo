@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+		<script>
+			  function goLogIn(){
+				  //window.location = "{{ path('_security_check') }}";
+			  }
+
+			  function onFbInit() {
+				 if (typeof(FB) != 'undefined' && FB != null ) {
+					  FB.Event.subscribe('auth.login', function(response) {
+						   //setTimeout(goLogIn,500);
+					  });
+				 }
+			  }
+</script>
     </head>
     <body>
+    
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

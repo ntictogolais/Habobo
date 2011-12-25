@@ -70,11 +70,17 @@
 [DoctrineMongoDBBundle]
     git=http://github.com/symfony/DoctrineMongoDBBundle.git
     target=/bundles/Symfony/Bundle/DoctrineMongoDBBundle
-    version=v2.0.0	
+    version=v2.0.1	
 
 [FOSFacebookBundle]
     git=git://github.com/FriendsOfSymfony/FOSFacebookBundle.git
     target=/bundles/FOS/FacebookBundle
+;    version=2.0
+    version=origin/2.0 
+
+[FOSUserBundle]
+    git=https://github.com/FriendsOfSymfony/FOSUserBundle.git
+    target=/bundles/FOS/UserBundle	
 
 [FacebookSDK]
     git=git://github.com/facebook/php-sdk.git

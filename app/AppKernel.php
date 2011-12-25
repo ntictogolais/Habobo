@@ -18,6 +18,9 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
 			new Symfony\Bundle\DoctrineMongoDBBundle\DoctrineMongoDBBundle(),
+			new FOS\FacebookBundle\FOSFacebookBundle(),
+            new Habobo\BaseBundle\HaboboBaseBundle(),
+			new FOS\UserBundle\FOSUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

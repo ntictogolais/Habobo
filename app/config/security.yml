@@ -1,6 +1,9 @@
 security:
+    factories:
+          - "%kernel.root_dir%/../vendor/bundles/FOS/FacebookBundle/Resources/config/security_factories.xml"
     encoders:
         Symfony\Component\Security\Core\User\User: plaintext
+        "FOS\UserBundle\Model\UserInterface": sha512
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
@@ -11,6 +14,9 @@ security:
             users:
                 user:  { password: userpass, roles: [ 'ROLE_USER' ] }
                 admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+             
+        my_fos_facebook_provider:
+                id: my.facebook.user 
 
     firewalls:
         dev:
@@ -20,7 +26,8 @@ security:
         login:
             pattern:  ^/demo/secured/login$
             security: false
-
+        
+        
         secured_area:
             pattern:    ^/demo/secured/
             form_login:
@@ -32,7 +39,34 @@ security:
             #anonymous: ~
             #http_basic:
             #    realm: "Secured Demo Area"
+        public:
+              # since anonymous is allowed users will not be forced to login
+              pattern:   .*              
+              fos_facebook:
+                app_url: "http://apps.facebook.com/235031239899482/"
+                #app_url: "http://www.habobo.org/app_dev.php/"
+                server_url: "http://www.habobo.org/app_dev.php/"                
+                check_path: /login_check
+                default_target_path: /
+                provider: my_fos_facebook_provider
+              #anonymous: true
+              logout:
+                  handlers: ["fos_facebook.logout_handler"]
+
 
     access_control:
-        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
+        - { path: /login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: /habobo/, roles: IS_AUTHENTICATED_FULLY }
+        #- { path: ^/login_check, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
         #- { path: ^/_internal, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }
+
+#Facebook
+fos_facebook:
+      file:   %kernel.root_dir%/../vendor/facebook/src/base_facebook.php
+      alias:  facebook
+      app_id: 235031239899482
+      secret: 01fc424d07182c19974fb0faeafb6912
+      cookie: true
+      permissions: [email,user_website, user_birthday, user_location,user_about_me,user_activities,user_education_history,user_interests,user_online_presence,xmpp_login]
+
+      
