@@ -1,19 +1,19 @@
 Habobo 
 ========================
-Le code a été developpé avec Symfony. Pour toute information sur l'installation veuillez consulter la doc 
+Le code a été developpé avec Symfony. Pour toute information détaillée sur l'installation veuillez consulter la doc 
 [Installation chapter](http://symfony.com/doc/current/book/installation.html).
-Les lignes qui suivent vont vous permettre de configurer l'appli en local pour pouvoir y contribuer
+Les lignes qui suivent vous permettront de configurer l'appli en local pour pouvoir y contribuer.
+(Vous aurez besoin d'installer et configurer git sur votre poste [Aide Git](http://help.github.com/)).
 
 1) Télécharger le code avec git  
 --------------------------------
 
 Placer vous dans un repertoire où vous désirer avoir l'appli.
 Executer
-  
     git clone http://github.com/ntictogolais/Habobo.git
     cd Habobo    
 
-!!! Note : Nous considérons <habobo_home> comme le chemin de Habobo dans la suite. !!!
+> Note : Nous considérons <habobo_home> comme le chemin de Habobo dans la suite. !
 
 2) Installation
 ---------------
