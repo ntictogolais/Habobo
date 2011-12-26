@@ -1,0 +1,28 @@
+vendor/
+
+app/config/dotcloud.php
+
+##app/config/config.yml
+README.md
+app/config/config de dotcloud.yml
+
+# Bootstrap
+
+app/bootstrap*
+
+
+# Symfony directories
+
+vendor/*
+	
+*/logs/*
+
+*/cache/*
+
+web/uploads/*
+
+##web/bundles/*
+
+# Configuration files
+
+##app/config/parameters.ini
