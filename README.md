@@ -46,7 +46,15 @@ it or download Symfony with the vendor libraries already included.
 ### c) Configurer un virtual host
 ...
 
-### d) Access the Application via the Browser
+### d) Configurer la base de données (Doctrine)
+...
+
+
+### e) Quelques dernières étapes.
+...
+
+
+### f) Access the Application via the Browser
 
 Congratulations! You're now ready to use Symfony. If you've unzipped Symfony
 in the web root of your computer, then you should be able to access the
