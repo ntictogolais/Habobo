@@ -4,8 +4,8 @@ Le code a été developpé avec Symfony. Pour toute information sur l'installati
 [Installation chapter](http://symfony.com/doc/current/book/installation.html).
 Les lignes qui suivent vont vous permettre de configurer l'appli en local pour pouvoir y contribuer
 
-1) Télécharger le code avec git  (tourner Symfony2)
--------------------------------------
+1) Télécharger le code avec git  
+--------------------------------
 
 Placer vous dans un repertoire où vous désirer avoir l'appli.
 Executer
