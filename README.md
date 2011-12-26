@@ -3,52 +3,47 @@ Habobo
 Le code a été developpé avec Symfony. Pour toute information détaillée sur l'installation veuillez consulter la doc 
 [Installation chapter](http://symfony.com/doc/current/book/installation.html).
 Les lignes qui suivent vous permettront de configurer l'appli en local pour pouvoir y contribuer.
-(Vous aurez besoin d'installer et configurer git sur votre poste [Aide Git](http://help.github.com/)).
+Vous aurez besoin d'installer et configurer sur votre poste:
 
+   * git : [aide Git](http://help.github.com/) .
+   * php/apache : [xampp](http://www.apachefriends.org/fr/xampp-windows.html)
+ 
 1) Télécharger le code avec git  
 --------------------------------
 
-Placer vous dans un repertoire où vous désirer avoir l'appli.
-Executer
-    git clone http://github.com/ntictogolais/Habobo.git
+Ouvrez une console et placez vous dans le repertoire des applications web du serveur Apache ( htdocs avec xampp).
+
+Executez:
+
+    git clone http://github.com/ntictogolais/Habobo.git    
     cd Habobo    
 
-> Note : Nous considérons <habobo_home> comme le chemin de Habobo dans la suite. !
+> Note : Nous considérons HABOBO_HOME comme le chemin de Habobo dans la suite. !
 
 2) Installation
 ---------------
 
-Once you've downloaded the standard edition, installation is easy, and basically
-involves making sure your system is ready for Symfony.
-
-### a) Check your System Configuration
-
-Before you begin, make sure that your local system is properly configured
-for Symfony. To do this, execute the following:
-
+Maintenant que vous avez le code, nous allons vérifier l'environnement.
+### a) Vérifier la Configuration
     php app/check.php
 
-If you get any warnings or recommendations, fix these now before moving on.
+Si vous avez des erreurs, corrigez les avant d'avancer.
 
-### b) Install the Vendor Libraries
-
-If you downloaded the archive "without vendors" or installed via git, then
-you need to download all of the necessary vendor libraries. If you're not
-sure if you need to do this, check to see if you have a ``vendor/`` directory.
-If you don't, or if that directory is empty, run the following:
+### b) Installez les Vendor Libraries
 
     php bin/vendors install
-
-Note that you **must** have git installed and be able to execute the `git`
-command to execute this script. If you don't have git available, either install
-it or download Symfony with the vendor libraries already included.
 
 ### c) Configurer un virtual host
 ...
 
 ### d) Configurer la base de données (Doctrine)
-...
+Symfony2 va nous créer une base de données sous mysql.
+Configurez les paramètres de votre base de données 
+    Editer app/config/parameters.ini et mettez les bons paramètres
 
+Créer la base:
+    php app/console doctrine:database:create
+    php app/console doctrine:schema:update --force
 
 ### e) Quelques dernières étapes.
 ...
