@@ -45,11 +45,12 @@ security:
               fos_facebook:
                 app_url: "http://apps.facebook.com/235031239899482/"
                 #app_url: "http://www.habobo.org/app_dev.php/"
+                #http://habobo-ntictogolais.dotcloud.com/
                 server_url: "http://www.habobo.org/app_dev.php/"                
                 check_path: /login_check
                 default_target_path: /
                 provider: my_fos_facebook_provider
-              #anonymous: true
+              anonymous: true
               logout:
                   handlers: ["fos_facebook.logout_handler"]
 
