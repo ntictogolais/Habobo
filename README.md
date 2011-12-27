@@ -77,13 +77,16 @@ Remplacer HABOBO_HOME par le chemin vers Habobo.
 
 3) Documentation Symfony!
 -------------------------
-Lancer l'appli.
-
+[Doc officielle](http://symfony.com/doc/current/).
+[Tuto developpez.com](http://j-place.developpez.com/tutoriels/php/creer-premiere-application-web-avec-symfony2/)
+[Google](http://www.google.fr)
 
 4) Proposer des ajouts/modifications !
 --------------------------------------
-Consulter l'aide git pour créer des branches, clone, faire des pull etc.
+Consulter l'aide (voir lien plus haut) git pour créer des branches, clone, faire des pull etc.
 
 Pour tout autre information, écrivez à ntictogolais@gmail.com
+Pour tout bug, utiliser l'onglet Issues de la page ou envoyer un mail.
+
 
 Enjoy!
