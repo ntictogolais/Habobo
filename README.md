@@ -33,39 +33,23 @@ Si vous avez des erreurs, corrigez les avant d'avancer.
 
     php bin/vendors install
 
-### c) Configurer un virtual host
-...
+### c) Configurer la base de données (Doctrine)
 
-### d) Configurer la base de données (Doctrine)
 Symfony2 va nous créer une base de données sous mysql.
-Configurez les paramètres de votre base de données 
-    Editer app/config/parameters.ini et mettez les bons paramètres
+Pour avoir les bons paramètres,
+
+    Editer app/config/parameters.ini et mettez les bons paramètres de connexion.
 
 Créer la base:
+    
     php app/console doctrine:database:create
     php app/console doctrine:schema:update --force
 
-### e) Quelques dernières étapes.
-...
+### d) Accédez à l'application 
 
-
-### f) Access the Application via the Browser
-
-Congratulations! You're now ready to use Symfony. If you've unzipped Symfony
-in the web root of your computer, then you should be able to access the
-web version of the Symfony requirements check via:
-
-    http://localhost/Symfony/web/config.php
-
-If everything looks good, click the "Bypass configuration and go to the Welcome page"
-link to load up your first Symfony page.
-
-You can also use a web-based configurator by clicking on the "Configure your
-Symfony Application online" link of the ``config.php`` page.
-
-To see a real-live Symfony page in action, access the following page:
-
-    web/app_dev.php/demo/hello/Fabien
+    http://localhost/Habobo/web/app_dev.php/
+    
+ 
 
 3) Documentation Symfony!
 -------------------------
@@ -74,5 +58,8 @@ Lancer l'appli.
 
 4) Proposer des ajouts/modifications !
 --------------------------------------
+Consulter l'aide git pour créer des branches, clone, faire des pull etc.
+
+Pour tout autre information, écrivez à ntictogolais@gmail.com
 
 Enjoy!
