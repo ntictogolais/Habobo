@@ -45,9 +45,33 @@ Créer la base:
     php app/console doctrine:database:create
     php app/console doctrine:schema:update --force
 
-### d) Accédez à l'application 
+### d) Ajouter une entrée DNS
+Ajouter une entrée dans /etc/hosts ou C:\Windows\System32\drivers\etc\host
+    
+    127.0.0.1       habobo.org www.habobo.org
 
-    http://localhost/Habobo/web/app_dev.php/
+### e) Ajouter un virtual host pour Apache (conf/extra/httpd-vhosts...)
+Remplacer HABOBO_HOME par le chemin vers Habobo.
+   
+    <Directory "HABOBO_HOME/web">
+      Options FollowSymLinks
+      DirectoryIndex app_dev.php
+      Order allow,deny
+      Allow from all
+    </Directory>
+    
+    <VirtualHost *:80>
+      ServerAdmin votremail@gmail.com
+      DocumentRoot "HABOBO_HOME/web"
+      ServerName www.habobo.org  
+      ServerAlias www.habobo.org
+      ErrorLog "logs/habobo.error.log"
+    
+    </VirtualHost>
+
+### f) Accédez à l'application 
+
+    http://www.habobo.org
     
  
 
